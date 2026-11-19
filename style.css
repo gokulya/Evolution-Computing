@@ -1,0 +1,30 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Arial, sans-serif; }
+body { background: #eef5ff; color: #12306b; }
+header { background: linear-gradient(135deg, #1e63d6, #4a9bff); color: #fff; text-align: center; padding: 28px 16px; }
+header h1 { font-size: 2rem; }
+header p { opacity: .9; margin-top: 6px; }
+main { max-width: 900px; margin: 24px auto; padding: 0 16px; display: grid; gap: 20px; }
+.card { background: #fff; border-radius: 14px; padding: 20px; box-shadow: 0 4px 16px rgba(30, 99, 214, .12); }
+.card h2 { margin-bottom: 14px; color: #1e63d6; font-size: 1.2rem; }
+.row, .grid { display: grid; gap: 10px; }
+.row { grid-template-columns: 2fr 1fr 1fr auto; }
+.grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-bottom: 16px; }
+label { display: grid; gap: 4px; font-size: .9rem; }
+input { padding: 9px; border: 1px solid #b9d3fb; border-radius: 8px; font-size: 1rem; }
+input:focus { outline: 2px solid #4a9bff; }
+button { padding: 9px 16px; border: none; border-radius: 8px; background: #4a9bff; color: #fff; font-size: 1rem; cursor: pointer; }
+button:hover { background: #1e63d6; }
+button.primary { width: 100%; padding: 12px; font-weight: bold; }
+table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+th, td { padding: 9px; text-align: left; border-bottom: 1px solid #e0ebfd; }
+th { background: #e6f0ff; }
+td button { background: #e74c3c; padding: 4px 10px; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 14px; }
+.stats div { background: #e6f0ff; border-radius: 10px; padding: 14px; text-align: center; }
+.stats span { display: block; font-size: 1.8rem; font-weight: bold; color: #1e63d6; }
+.stats small { color: #4b6aa8; }
+canvas { width: 100%; max-width: 100%; margin-top: 12px; background: #f7fbff; border-radius: 10px; }
+.hint { font-size: .8rem; color: #6c86b8; margin-top: 6px; }
+footer { text-align: center; padding: 20px; color: #6c86b8; }
+@media (max-width: 600px) { .row { grid-template-columns: 1fr 1fr; } .stats { grid-template-columns: 1fr; } }

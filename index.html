@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Knapsack Optimizer using Genetic Algorithm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎒 Smart Knapsack Optimizer</h1>
+    <p>0/1 Knapsack Problem solved using a Genetic Algorithm — Evolutionary Computing</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>1. Items</h2>
+      <div class="row">
+        <input id="name" placeholder="Item name">
+        <input id="weight" type="number" min="1" placeholder="Weight (kg)">
+        <input id="value" type="number" min="1" placeholder="Value (₹)">
+        <button id="addBtn">Add</button>
+      </div>
+      <table>
+        <thead><tr><th>Item</th><th>Weight</th><th>Value</th><th></th></tr></thead>
+        <tbody id="itemsBody"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>2. GA Parameters</h2>
+      <div class="grid">
+        <label>Capacity (kg)<input id="capacity" type="number" value="10" min="1"></label>
+        <label>Population Size<input id="popSize" type="number" value="30" min="4"></label>
+        <label>Generations<input id="generations" type="number" value="50" min="1"></label>
+        <label>Mutation Rate<input id="mutation" type="number" value="0.05" step="0.01" min="0" max="1"></label>
+      </div>
+      <button id="runBtn" class="primary">▶ Run Genetic Algorithm</button>
+    </section>
+
+    <section class="card" id="resultCard" hidden>
+      <h2>3. Result</h2>
+      <div class="stats">
+        <div><span id="rValue">0</span><small>Total Value (₹)</small></div>
+        <div><span id="rWeight">0</span><small>Total Weight (kg)</small></div>
+        <div><span id="rGen">0</span><small>Best Found at Gen</small></div>
+      </div>
+      <p><b>Selected items:</b> <span id="rItems"></span></p>
+      <canvas id="chart" width="700" height="280"></canvas>
+      <p class="hint">Blue line = best fitness per generation · Light line = average fitness</p>
+    </section>
+  </main>
+
+  <footer>Evolutionary Computing Project</footer>
+  <script src="script.js"></script>
+</body>
+</html>v
